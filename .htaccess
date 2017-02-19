@@ -1,0 +1,48 @@
+Options -Indexes
+
+RewriteEngine on
+
+# Site
+RewriteRule ^$ app/controller/siteController.php?action=home [QSA,L]
+RewriteRule ^home/error/?$ app/controller/siteController.php?action=error [QSA,L]
+RewriteRule ^home/?$ app/controller/siteController.php?action=home [QSA,L]
+RewriteRule ^targets/?$ app/controller/siteController.php?action=targets [QSA,L]
+RewriteRule ^background/?$ app/controller/siteController.php?action=background [QSA,L]
+RewriteRule ^profile/?$ app/controller/siteController.php?action=profile [QSA,L]
+
+#signin and signup
+RewriteRule ^signin/process/?$ app/controller/siteController.php?action=signinProcess [QSA,L]
+RewriteRule ^signup/process/?$ app/controller/siteController.php?action=signupProcess [QSA,L]
+RewriteRule ^signup/?$ app/controller/siteController.php?action=signup [QSA,L]
+
+
+#signout
+RewriteRule ^signout/?$ app/controller/siteController.php?action=signout [QSA,L]
+
+#jobs
+RewriteRule ^jobs/details/(\d+)/?$ app/controller/jobsController.php?action=viewJobPost&id=$1 [QSA,L]
+RewriteRule ^jobs/create/process/?$ app/controller/jobsController.php?action=createJobProcess [QSA,L]
+RewriteRule ^jobs/create/?$ app/controller/jobsController.php?action=createJobPost [QSA,L]
+RewriteRule ^jobs/edit/(\d+)/process/?$ app/controller/jobsController.php?action=editJobProcess&id=$1 [QSA,L]
+RewriteRule ^jobs/edit/(\d+)/?$ app/controller/jobsController.php?action=editJobPost&id=$1 [QSA,L]
+RewriteRule ^jobs/?$ app/controller/jobsController.php?action=jobs&jobsType=$1 [QSA,L]
+RewriteRule ^jobs/like/?$ app/controller/jobsController.php?action=like [QSA,L]
+
+#applications
+RewriteRule ^addApplication/?$ app/controller/appsController.php?action=addApp [QSA,L]
+RewriteRule ^editApplications/process/?$ app/controller/appsController.php?action=editAppsProcess [QSA,L]
+RewriteRule ^editApplications/delete/?$ app/controller/appsController.php?action=deleteApp [QSA,L]
+RewriteRule ^editApplications/?$ app/controller/appsController.php?action=editApps [QSA,L]
+RewriteRule ^applications/?$ app/controller/appsController.php?action=listApps [QSA,L]
+RewriteRule ^applications/data/?$ app/controller/appsController.php?action=data [QSA,L]
+RewriteRule ^applications/calendar/?$ app/controller/appsController.php?action=calendar [QSA,L]
+
+#users
+RewriteRule ^turker/?$ app/controller/profileController.php?action=addTurker [QSA,L]
+RewriteRule ^addUser/?$ app/controller/profileController.php?action=addUser [QSA,L]
+RewriteRule ^userMgmt/?$ app/controller/profileController.php?action=userMgmt [QSA,L]
+RewriteRule ^saveProfile/?$ app/controller/profileController.php?action=saveProfile [QSA,L]
+RewriteRule ^editUserType/?$ app/controller/profileController.php?action=editUserType [QSA,L]
+
+
+
