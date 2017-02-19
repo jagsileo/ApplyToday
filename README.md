@@ -5,7 +5,7 @@ A full stack web app for applicants to manage their job applications.
 
 # Technology stack
 LAMP - Linux/Apache/MySQL/PHP, CSS, jQuery/Javascript, AJAX
-<br /> Hosted @ 54.164.75.123/applytoday2 (AWS)
+<br /> Hosted <a href = "http://54.164.75.123/applytoday2">here</a> (AWS)
 
 # Contributors:
-Radha Krishnan Vinayagam, Moeti Masiane
+<a href = "https://github.com/imradhakrishnan"> Radha Krishnan Vinayagam </a>, <a href = "https://github.com/mmasiane">Moeti Masiane</a>
